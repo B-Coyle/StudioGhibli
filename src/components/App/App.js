@@ -36,43 +36,9 @@ export default class App extends Component {
   render() {
     return (
       <section className="App mainBody">
-        {/* <div className="App mainBody">
-          {/* <Switch>
-            {/* <Route exact path="/" component={} /> */}
-            {/* <Route path="/Header" component={Header} />
-            <Redirect to="/" /> */}
-          {/* </Switch> */}
-        {/* </div> */} 
         <div>
           <Header />
         </div>
-        <nav role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span />
-            <span />
-            <span />
-            <ul id="menu">
-              <h4 className="user-name" />
-              <Link to="/MovieContainer">
-                <li>Home</li>
-              </Link>
-              <hr />
-              <Link to="MovieContainer/favorites">
-                <li>Favorites</li>
-              </Link>
-              <hr />
-              <Link to="">
-                <li>About</li>
-              </Link>
-              <hr />
-              <Link to="/Login">
-                <li>Sign Out</li>
-              </Link>
-              <hr />
-            </ul>
-          </div>
-        </nav>
         <main className="mainCardArea">
           <p>{this.state.randomFilm.title}</p>
           <p>{this.state.randomFilm.description}</p>
