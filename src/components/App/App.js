@@ -3,7 +3,8 @@ import "./App.scss";
 // import PropTypes from "prop-types";
 import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";
-// import MainContainer from "../MainContainer/MainContainer.js";
+import PeopleContainer from "../../containers/PeopleContainer/index";
+import LocationContainer from '../../containers/LocationContainer/index';
 
 export default class App extends Component {
   constructor() {
@@ -35,13 +36,11 @@ export default class App extends Component {
   render() {
     return (
       <section className="App mainBody">
-        <div>
+        <main>
           <Header />
-        </div>
-        <main className="mainCardArea">
-          <p>{this.state.randomFilm.title}</p>
-          <p>{this.state.randomFilm.description}</p>
-        </main>
+          <PeopleContainer />
+          <LocationContainer />
+      </main>
       </section>
     );
   }
