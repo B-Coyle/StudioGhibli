@@ -18,3 +18,12 @@ export const fetchPeople = () => {
   });
 };
 
+export const fetchLocations = () => {
+  return fetch("https://ghibliapi.herokuapp.com/locations").then(response => {
+    if (!response.ok) {
+      throw Error("Error loading locations");
+    } else {
+      return response.json();
+    }
+  });
+};
