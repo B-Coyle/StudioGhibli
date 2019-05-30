@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Header from '../../containers/Header/index';
+import {fetchMovie} from '../../util/apiCalls';
 
 class App extends Component {
   constructor() {
     super()
     this.state= {
-      films = [],
-      randomFilm = {}
+      films: [],
+      randomFilm: {}
     }
   }
 
