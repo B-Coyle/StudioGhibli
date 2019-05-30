@@ -9,17 +9,17 @@ export default class Header extends Component {
         <header>
           <section className="header-title">
             <h1 className="h1">
-              Studio <i className="fas fa-film" /> Ghibli
+              Studio Ghibli
             </h1>
           </section>
-        <nav role='navigation'>
+        <nav>
           <div id='menuToggle'> 
             <input type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>   
             <ul id='menu'>
-            <h4 className='user-name'></h4>
+            <h4 className='user-name'>StudioGhibli Routes</h4>
               <Link to='/MovieContainer'>
                 <li>Home</li>
               </Link>

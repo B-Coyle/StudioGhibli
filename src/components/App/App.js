@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./App.scss";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";
-import { Route, Switch, Redirect, Link } from "react-router-dom";
 // import MainContainer from "../MainContainer/MainContainer.js";
 
 export default class App extends Component {
