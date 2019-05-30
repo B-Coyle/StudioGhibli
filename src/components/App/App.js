@@ -3,6 +3,7 @@ import "./App.scss";
 import PropTypes from "prop-types";
 import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";
+import { Route, Switch, Redirect, Link } from "react-router-dom";
 // import MainContainer from "../MainContainer/MainContainer.js";
 
 export default class App extends Component {
@@ -10,7 +11,7 @@ export default class App extends Component {
     super();
     this.state = {
       allFilms: [],
-      randomFilm: {},
+      randomFilm: {}
     };
   }
 
@@ -35,9 +36,9 @@ export default class App extends Component {
   render() {
     return (
       <section className="App mainBody">
-        <header className="headerContainer">
+        <div>
           <Header />
-        </header>
+        </div>
         <main className="mainCardArea">
           <p>{this.state.randomFilm.title}</p>
           <p>{this.state.randomFilm.description}</p>
@@ -46,5 +47,3 @@ export default class App extends Component {
     );
   }
 }
-
-
