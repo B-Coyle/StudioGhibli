@@ -5,6 +5,7 @@ import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";
 import PeopleContainer from "../../containers/PeopleContainer/index";
 import LocationContainer from '../../containers/LocationContainer/index';
+import Button from '../Button/Button';
 
 export default class App extends Component {
   constructor() {
@@ -38,6 +39,7 @@ export default class App extends Component {
       <section className="App mainBody">
         <main>
           <Header />
+          <Button />
           <PeopleContainer />
           <LocationContainer />
       </main>
