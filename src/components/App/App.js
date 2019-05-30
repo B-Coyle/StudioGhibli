@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./App.scss";
+import "./App.scss";
 import PropTypes from "prop-types";
 import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";

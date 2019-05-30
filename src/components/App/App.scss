@@ -7,15 +7,7 @@
   margin: 0;
   display: grid;
   position: relative;
-  grid-template-areas:
-    "header header header"
-    "main main main";
 }
 
-.buttonContainer {
-  grid-area: nav;
-}
 
-.mainCardArea {
-  grid-area: main;
-}
+
