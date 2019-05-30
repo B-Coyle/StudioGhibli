@@ -8,3 +8,13 @@ export const fetchMovie = () => {
   });
 };
 
+export const fetchPeople = () => {
+  return fetch(`https://ghibliapi.herokuapp.com/people`).then(response => {
+    if (!response.ok) {
+      throw Error("Error loading people");
+    } else {
+      return response.json();
+    }
+  });
+};
+
