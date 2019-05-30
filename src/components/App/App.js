@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+// import "./App.scss";
+import PropTypes from "prop-types";
 import Header from "../../containers/Header/index";
-import { fetchMovie } from "../../util/apiCalls";
+import { fetchMovie } from "../../util/apiCalls.js";
+// import MainContainer from "../MainContainer/MainContainer.js";
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      films: [],
-      randomFilm: {}
+      allFilms: [],
+      randomFilm: {},
     };
   }
 
@@ -15,7 +18,7 @@ class App extends Component {
     fetchMovie().then(films =>
       this.setState(
         {
-          films: films.results
+          allFilms: films
         },
         () => this.assignRandomInformation()
       )
@@ -25,7 +28,7 @@ class App extends Component {
   assignRandomInformation = () => {
     let randomNumber = Math.floor(Math.random() * this.state.allFilms.length);
     this.setState({
-      randomFilm: this.state.films[randomNumber]
+      randomFilm: this.state.allFilms[randomNumber]
     });
   };
 
@@ -44,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+
