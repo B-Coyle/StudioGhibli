@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { fetchPeople } from "../../util/apiCalls";
 import Card from "../../components/Card/index";
 
-export default class CardContainer extends Component {
+export default class PeopleCard extends Component {
   constructor() {
     super();
     this.state = {

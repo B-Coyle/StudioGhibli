@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./App.scss";
+import "./App.css";
 // import PropTypes from "prop-types";
 import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";
-import PeopleContainer from "../../containers/PeopleContainer/index";
-import LocationContainer from '../../containers/LocationContainer/index';
-import Button from '../Button/Button';
+import MainContainer from "../../containers/MainContainer/MainContainer";
+import Button from "../Button/Button";
+import Nav from "../Nav/Nav";
 
 export default class App extends Component {
   constructor() {
@@ -37,12 +37,16 @@ export default class App extends Component {
   render() {
     return (
       <section className="App mainBody">
+        <h1 className="main-title">Studio Ghibli</h1>
+        <p>
+          “We each need to find our own inspiration. Sometimes it’s not
+          easy.”—Kiki’s Delivery Service (1989)
+        </p>
         <main>
-          <Header />
+          <Nav />
           <Button />
-          <PeopleContainer />
-          <LocationContainer />
-      </main>
+          <MainContainer />
+        </main>
       </section>
     );
   }
