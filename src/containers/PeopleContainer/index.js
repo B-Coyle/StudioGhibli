@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { fetchPeople } from "../../util/apiCalls";
-import Card from '../../components/Card/index';
+import Card from "../../components/Card/index";
 
 export default class CardContainer extends Component {
   constructor() {
@@ -12,8 +12,7 @@ export default class CardContainer extends Component {
   }
 
   componentDidMount() {
-    fetchPeople()
-    .then(people =>
+    fetchPeople().then(people =>
       this.setState({
         people,
         loading: true
@@ -22,27 +21,22 @@ export default class CardContainer extends Component {
     this.formatPerson();
   }
 
-  formatPerson=()=> {
+  formatPerson = () => {
     let updatedPeople = this.state.characters.map(person => {
-      let { name, age, gender,  } = person;
+      let { name, age, gender } = person;
       return { name, age, gender };
     });
 
-    this.setState({ 
-      people: updatedPeople, 
-      loading: false 
+    this.setState({
+      people: updatedPeople,
+      loading: false
     });
-    
-  }; 
+  };
 
   render() {
-    const peopleCards = this.state.characters.map(person => 
-      <Card 
-        key={person.id}
-        data={person}
-        category="person"
-      />
-    )
+    const peopleCards = this.state.characters.map(person => (
+      <Card key={person.id} data={person} category="person" />
+    ));
 
     const loadingMessage = (
       <div className="loadingMessage">
