@@ -1,3 +1,13 @@
+body
+body {
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+
 a {
     text-decoration: none;
     color: white;
@@ -101,30 +111,5 @@ a {
   .header-title {
     position: absolute;
     left: 930px;
-  }
-  
-  .h1 {
-    font-size: 70px;
-  }
-  
-  .movies {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-  }
-  
-  main img {
-    flex-wrap: wrap;
-  }
-  
-  hr {
-    color: white;
-    width: 100px;
-    margin-left: 18px;
-  }
-
-  .none {
-    color: white;
   }
   
