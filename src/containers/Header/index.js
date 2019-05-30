@@ -9,6 +9,8 @@ export default class Header extends Component {
         <header>
           <section className="header-title">
             <h1 className="h1">Studio Ghibli</h1>
+            <p>“We each need to find our own inspiration. Sometimes it’s not easy.” </p>
+            <p>—Kiki’s Delivery Service (1989)</p>
           </section>
           <nav role="navigation">
             <div id="menuToggle">
