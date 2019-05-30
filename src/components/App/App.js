@@ -1,31 +1,33 @@
-import React, { Component } from 'react';
-import Header from '../../containers/Header/index';
-import {fetchMovie} from '../../util/apiCalls';
+import React, { Component } from "react";
+import Header from "../../containers/Header/index";
+import { fetchMovie } from "../../util/apiCalls";
 
 class App extends Component {
   constructor() {
-    super()
-    this.state= {
+    super();
+    this.state = {
       films: [],
       randomFilm: {}
-    }
+    };
   }
 
   componentDidMount() {
-    fetchMovie()
-    .then(films => this.setState({
-        films: films.results
-    }, () => this.assignRandomInformation()
-    ) )
- }
+    fetchMovie().then(films =>
+      this.setState(
+        {
+          films: films.results
+        },
+        () => this.assignRandomInformation()
+      )
+    );
+  }
 
- assignRandomInformation= () => {
-  let randomNumber = Math.floor(Math.random() * this.state.allFilms.length )
-  this.setState ({
-  randomFilm: this.state.allFilms[randomNumber],
-  })
-}
-
+  assignRandomInformation = () => {
+    let randomNumber = Math.floor(Math.random() * this.state.allFilms.length);
+    this.setState({
+      randomFilm: this.state.films[randomNumber]
+    });
+  };
 
   render() {
     return (

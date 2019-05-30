@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { filmsReducer } from './notesReducer';
+import { filmsReducer } from './filmsReducer';
 
 const rootReducer = combineReducers({
-  films: notesReducer
+  films: filmsReducer
 })
 
 export default rootReducer;
