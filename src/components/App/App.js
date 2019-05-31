@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 // import PropTypes from "prop-types";
-import Header from "../../containers/Header/index";
 import { fetchMovie } from "../../util/apiCalls.js";
 import MainContainer from "../../containers/MainContainer/MainContainer";
 import Button from "../Button/Button";
