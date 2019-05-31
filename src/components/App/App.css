@@ -1,17 +1,20 @@
-body {
-  display: grid;
-
-
+.header{
+  display: flex;
+  flex-direction: column;
+  background-color: #739f3d;
 }
 
-.header-title {
+.main-title, 
+.quote {
+  margin: 0;
+  color:white;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
-.main-title {
-  font-size: 65px;
+.quote {
+  padding: 10px;
+  font-weight: bolder;
 }
 
 hr {

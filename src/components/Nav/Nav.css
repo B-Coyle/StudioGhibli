@@ -37,7 +37,7 @@ a {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #0f1b07;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -56,7 +56,7 @@ a {
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: white;
+    background: #0f1b07;
   }
   
   #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -75,7 +75,7 @@ a {
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    background: hsla(197, 54%, 41%, 1);
+    background: hsla(14, 84%, 59%, 1);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
@@ -93,21 +93,6 @@ a {
   #menuToggle input:checked ~ ul {
     transform: none;
   }
-  
-  header {
-    padding: 0;
-    display: flex;
-  }
-  
-  .header-title {
-    position: absolute;
-    justify-content: center;
-  }
-  
-  .main-title {
-    font-size: 65px;
-  }
-  
     
   hr {
     color: white;
