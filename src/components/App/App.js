@@ -42,9 +42,15 @@ export default class App extends Component {
           easy.”—Kiki’s Delivery Service (1989)
         </p>
         <main>
-          <Nav />
-          <Button />
-          <MainContainer />
+          <div className="Nav">
+            <Nav />
+          </div>
+          <div className="Button">
+            <Button />
+          </div>
+          <div className="MainContainer">
+            <MainContainer />
+          </div>
         </main>
       </section>
     );

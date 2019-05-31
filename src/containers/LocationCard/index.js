@@ -21,7 +21,7 @@ export default class LocationCard extends Component {
   render() {
     return (
       <section>
-      <p>Test</p>
+      <p>Test2</p>
       </section>
     );
   }

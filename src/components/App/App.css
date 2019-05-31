@@ -1,3 +1,9 @@
+body {
+  display: grid;
+
+
+}
+
 .header-title {
   display: flex;
   flex-wrap: wrap;
@@ -11,4 +17,19 @@
 hr {
   color: white;
   width: 100px;
+}
+
+.Nav {
+  margin-top: 60px;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+}
+
+.MainContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
