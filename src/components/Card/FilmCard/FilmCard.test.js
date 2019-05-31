@@ -1,8 +1,8 @@
-import  {MainContainer} from './MainContainer';
+import  {FilmCard} from './index';
 import { shallow } from "enzyme";
 import React from 'react';
 
-describe("MainContainer", () =>{
+describe("FilmCard", () =>{
     let wrapper 
 
     it("should match the snapshot", () => {
