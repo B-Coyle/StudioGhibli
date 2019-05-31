@@ -1,18 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import  './Nav.css';
+import {Link} from 'react-router-dom';
 
-class Header extends Component {
+export default class Nav extends Component {
+  constructor() {
+    super();
+  }
+
   render() {
     return (
       <section className="Header">
         <header>
-          <section className="header-title">
-            <h1 className="main-title">Studio Ghibli</h1>
-            <hr />
-            <p className="quote">“We each need to find our own inspiration. Sometimes it’s not
-              easy.” —Kiki’s Delivery Service (1989)</p>
-          </section>
           <nav role="navigation">
             <div id="menuToggle">
               <input type="checkbox" />
@@ -52,5 +50,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;

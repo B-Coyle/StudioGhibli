@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {fetchLocations } from "../../util/apiCalls";
 
-export default class CardContainer extends Component {
+export default class LocationCard extends Component {
   constructor() {
     super();
     this.state = {
