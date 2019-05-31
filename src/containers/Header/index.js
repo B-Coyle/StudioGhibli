@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import "./Header.scss";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
-export default class Header extends Component {
+class Header extends Component {
   render() {
     return (
-      <section>
+      <section className="Header">
         <header>
           <section className="header-title">
-            <h1 className="h1">Studio Ghibli</h1>
+            <h1 className="main-title">Studio Ghibli</h1>
+            <hr />
+            <p className="quote">“We each need to find our own inspiration. Sometimes it’s not
+              easy.” —Kiki’s Delivery Service (1989)</p>
           </section>
           <nav role="navigation">
             <div id="menuToggle">
@@ -17,19 +20,19 @@ export default class Header extends Component {
               <span />
               <span />
               <ul id="menu">
-                <Link to="/MovieContainer">
+                <Link to="/">
                   <li>Home</li>
                 </Link>
                 <hr />
-                <Link to="CardContainer/films">
+                <Link to="/films">
                   <li>Films</li>
                 </Link>
                 <hr />
-                <Link to="CardContainer/characters">
+                <Link to="/characters">
                   <li>Characters</li>
                 </Link>
                 <hr />
-                <Link to="CardContainer/locations">
+                <Link to="/locations">
                   <li>Locations</li>
                 </Link>
                 <hr />
@@ -49,3 +52,5 @@ export default class Header extends Component {
     );
   }
 }
+
+export default Header;

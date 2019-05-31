@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./components/App/App";
+import './index.scss'
 import App from "./components/App/App";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
@@ -17,7 +17,7 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Route path="/" component={App} />
+      <App />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
