@@ -43,7 +43,7 @@ export default class App extends Component {
               easy.”</p>
               <p className="quote">—Kiki’s Delivery Service (1989)</p>
           </div>
-        <main>
+        <main className = "main">
           <div className="Nav">
             <Nav />
           </div>
