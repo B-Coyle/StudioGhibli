@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {fetchLocations } from "../../util/apiCalls";
+import {fetchLocations } from "../../../util/apiCalls";
 
 export default class LocationCard extends Component {
   constructor() {

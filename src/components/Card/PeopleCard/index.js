@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { fetchPeople } from "../../util/apiCalls";
-import Card from "../../components/Card/index";
+import { fetchPeople } from "../../../util/apiCalls";
+
 
 export default class PeopleCard extends Component {
   constructor() {
