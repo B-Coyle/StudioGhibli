@@ -36,11 +36,13 @@ export default class App extends Component {
   render() {
     return (
       <section className="App mainBody">
-        <h1 className="main-title">Studio Ghibli</h1>
-        <p>
-          “We each need to find our own inspiration. Sometimes it’s not
-          easy.”—Kiki’s Delivery Service (1989)
-        </p>
+          <div className="header">
+            <h1 className="main-title">Studio Ghibli</h1>
+            <p className="quote">
+              “We each need to find our own inspiration. Sometimes it’s not
+              easy.”</p>
+              <p className="quote">—Kiki’s Delivery Service (1989)</p>
+          </div>
         <main>
           <div className="Nav">
             <Nav />
