@@ -3,7 +3,6 @@ import "./App.css";
 // import PropTypes from "prop-types";
 import { fetchMovie } from "../../util/apiCalls.js";
 import MainContainer from "../../containers/MainContainer/MainContainer";
-import Button from "../Button/Button";
 import Nav from "../Nav/Nav";
 
 export default class App extends Component {
@@ -36,19 +35,16 @@ export default class App extends Component {
   render() {
     return (
       <section className="App mainBody">
-          <div className="header">
-            <h1 className="main-title">Studio Ghibli</h1>
-            <p className="quote">
-              “We each need to find our own inspiration. Sometimes it’s not
-              easy.”</p>
-              <p className="quote">—Kiki’s Delivery Service (1989)</p>
-          </div>
-        <main className = "main">
+        <div className="header">
+          <h1 className="main-title">Studio Ghibli</h1>
+          <p className="quote">
+            “We each need to find our own inspiration. Sometimes it’s not easy.”
+          </p>
+          <p className="quote">—Kiki’s Delivery Service (1989)</p>
+        </div>
+        <main className="main">
           <div className="Nav">
             <Nav />
-          </div>
-          <div className="Button">
-            <Button />
           </div>
           <div className="MainContainer">
             <MainContainer />
