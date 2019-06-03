@@ -1,13 +1,13 @@
 import React from "react";
 import './Card.css'
 
-export const PeopleCard = ({ character }) => {
+export const PeopleCard = ({ people }) => {
   return (
   <article className="card">
-    <p>Character Name: {character.name}</p>
-    <p>Gender: {character.gender}</p>
-    <p>Age: {character.age}</p>
-    <p>Eye Color: {character.eye_color}</p>
-    <p>Hair Color: {character.hair_color}</p>
+    <p>Character Name: {people.name}</p>
+    <p>Gender: {people.gender}</p>
+    <p>Age: {people.age}</p>
+    <p>Eye Color: {people.eye_color}</p>
+    <p>Hair Color: {people.hair_color}</p>
   </article>)
 };

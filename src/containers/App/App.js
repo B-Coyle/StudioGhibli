@@ -6,12 +6,10 @@ import { fetchFilms } from "../../thunks/fetchFilms";
 import { fetchLocations } from "../../thunks/fetchLocations";
 import { fetchPeople } from "../../thunks/fetchPeople";
 import Nav from "../../components/Nav/Nav";
-import { MainContainer } from "../MainContainer/MainContainer";
+import MainContainer from "../MainContainer/MainContainer";
 import { Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
-import { PeopleCard } from "../../components/Card/PeopleCard";
-import { FilmCard } from "../../components/Card/FilmCard";
-import { LocationCard } from "../../components/Card/LocationCard";
+
 
 export class App extends Component {
   constructor() {
@@ -38,15 +36,8 @@ export class App extends Component {
         <main className="main">
           {hasErrored && <h2>Error loading information</h2>}
           {isLoading && <h2>Please wait- information loading ...</h2>}
-          <Router>
-            <div>
-              <Route path="/" component={App} />
-              <Route path="/characters" component={PeopleCard} />
-              <Route path="/films" component={FilmCard} />
-              <Route path="/locations" component={LocationCard} />
-            </div>
-          </Router>
-          <MainContainer films={this.props.films} locations={this.props.locations} people={this.props.people} />
+          <Nav /> 
+          <MainContainer  />
         </main>
       </section>
     );
@@ -56,10 +47,6 @@ export class App extends Component {
 export const mapStateToProps = state => ({
   isLoading: state.isLoading,
   hasErrored: state.hasErrored,
-  films: state.films,
-  locations: state.locations,
-  people: state.people,
-  category: state.category 
 });
 
 export const mapDispatchToProps = dispatch => ({
@@ -72,3 +59,12 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+      {/* <Router>
+            <div>
+              <Route path="/" component={App} />
+              <Route path="/characters" component={PeopleCard} />
+              <Route path="/films" component={FilmCard} />
+              <Route path="/locations" component={LocationCard} />
+            </div>
+          </Router> */}
