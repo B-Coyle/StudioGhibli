@@ -1,7 +1,7 @@
 import React from "react";
 import './Card.css'
 
-export const Card = ({ character }) => {
+export const PeopleCard = ({ character }) => {
   return (
   <article className="card">
     <p>Character Name: {character.name}</p>
