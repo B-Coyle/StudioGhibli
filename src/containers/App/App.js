@@ -46,7 +46,7 @@ export class App extends Component {
               <Route path="/locations" component={LocationCard} />
             </div>
           </Router>
-          ) ReactDOM.render(routing, document.getElementById('root'))
+          <MainContainer films={this.props.films} locations={this.props.locations} people={this.props.people} />
         </main>
       </section>
     );
@@ -58,7 +58,8 @@ export const mapStateToProps = state => ({
   hasErrored: state.hasErrored,
   films: state.films,
   locations: state.locations,
-  people: state.people
+  people: state.people,
+  category: state.category 
 });
 
 export const mapDispatchToProps = dispatch => ({
