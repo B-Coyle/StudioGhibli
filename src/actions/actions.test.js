@@ -31,5 +31,27 @@ describe('actions', () => {
             const result = getFilms([{film: "Howl's Moving Castle"}])
             expect(result).toEqual(expected);
         })
-    })
+    });
+
+    // describe('getLocations', () => {
+    //     it('should return an action object with a type of GET_FILMS', () => {
+    //         const expected = {
+    //             type: 'GET_LOCATIONSS',
+    //             presidents: [{film: "Howl's Moving Castle"}]
+    //         }
+    //         const result = getFilms([{film: "Howl's Moving Castle"}])
+    //         expect(result).toEqual(expected);
+    //     })
+    // });
+
+    // describe('getPeople', () => {
+    //     it('should return an action object with a type of GET_FILMS', () => {
+    //         const expected = {
+    //             type: 'GET_PEOPLE',
+    //             presidents: [{film: "Howl's Moving Castle"}]
+    //         }
+    //         const result = getFilms([{film: "Howl's Moving Castle"}])
+    //         expect(result).toEqual(expected);
+    //     })
+    // });
 })
