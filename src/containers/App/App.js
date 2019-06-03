@@ -3,7 +3,7 @@ import "./App.css";
 // import PropTypes from "prop-types";
 import { fetchMovie } from "../../util/apiCalls.js";
 import MainContainer from "../../containers/MainContainer/MainContainer";
-import Nav from "../Nav/Nav";
+import Nav from '../../components/Nav/Nav';
 
 export default class App extends Component {
   constructor() {
@@ -54,3 +54,5 @@ export default class App extends Component {
     );
   }
 }
+
+
