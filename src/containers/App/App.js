@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import "./App.css";
 // import PropTypes from "prop-types";
 import { fetchMovie } from "../../util/apiCalls.js";
-import {MainContainer} from "../../containers/MainContainer/MainContainer";
+import  {fetchFilms} from '../../thunks/fetchFilms'
+import {fetchLocations} from '../../thunks/fetchLocations';
+import {fetchPeople} from '../../thunks/fetchPeople';
 import Nav from '../../components/Nav/Nav';
+import {MainContainer} from '../MainContainer/MainContainer';
+import {connect} from 'react-redux';
 
 export class App extends Component {
   constructor() {
