@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import "./MainContainer.css";
 import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
+import {fetchFilms} from '../../thunks/fetchFilms';
+import {fetchLocations} from '../../thunks/fetchLocations';
+import {fetchPeople} from '../../thunks/fetchPeople';
 import FilmCard from '../../components/Card/FilmCard/index';
 import LocationCard from '../../components/Card/LocationCard/index';
 import PeopleCard from '../../components/Card/PeopleCard/index';
+import { connect } from "net";
 
 export class MainContainer extends Component {
   constructor() {
@@ -40,8 +44,13 @@ export const mapStateToProps = state => ({
   films: state.films,
   locations: state.locations,
   people: state.people
+})
 
+export const mapDispatchToProps = dispatch => ({
+  fetchFilms: () => dispatch(fetchFilms()),
+  fetchLocations: () => dispatch(fetchLocations()),
+  fetchPeople: () => dispatch(fetchPeople())
 })
 
 
-export default MainContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
