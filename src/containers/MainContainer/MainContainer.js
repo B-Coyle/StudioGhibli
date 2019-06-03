@@ -31,17 +31,11 @@ export class MainContainer extends Component {
           <button className="button" onClick={this.handleChange} name="films">
             Films
           </button>
-          <FilmCard />
+          <FilmCard films={films}/>
         </Route>
         <Route exact path="/characters">
-          <button
-            className="button"
-            onClick={this.handleChange}
-            name="characters"
-          >
-            Characters
-          </button>
-          <PeopleCard />
+          <button className="button" onClick={this.handleChange} name="characters">Characters</button>
+          <PeopleCard people={people}/>
         </Route>
         <Route exact path="/locations">
           <button
@@ -51,7 +45,7 @@ export class MainContainer extends Component {
           >
             Locations
           </button>
-          <LocationCard />
+          <LocationCard locations={locations} />
         </Route>
       </section>
     );

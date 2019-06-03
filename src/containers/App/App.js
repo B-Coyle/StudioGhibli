@@ -2,35 +2,35 @@ import React, { Component } from "react";
 import "./App.css";
 // import PropTypes from "prop-types";
 import { fetchMovie } from "../../util/apiCalls.js";
-import MainContainer from "../../containers/MainContainer/MainContainer";
+import {MainContainer} from "../../containers/MainContainer/MainContainer";
 import Nav from '../../components/Nav/Nav';
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      allFilms: [],
-      randomFilm: {}
+      // allFilms: [],
+      // randomFilm: {}
     };
   }
 
-  componentDidMount() {
-    fetchMovie().then(films =>
-      this.setState(
-        {
-          allFilms: films
-        },
-        () => this.assignRandomInformation()
-      )
-    );
-  }
+  // componentDidMount() {
+  //   fetchMovie().then(films =>
+  //     this.setState(
+  //       {
+  //         allFilms: films
+  //       },
+  //       () => this.assignRandomInformation()
+  //     )
+  //   );
+  // }
 
-  assignRandomInformation = () => {
-    let randomNumber = Math.floor(Math.random() * this.state.allFilms.length);
-    this.setState({
-      randomFilm: this.state.allFilms[randomNumber]
-    });
-  };
+  // assignRandomInformation = () => {
+  //   let randomNumber = Math.floor(Math.random() * this.state.allFilms.length);
+  //   this.setState({
+  //     randomFilm: this.state.allFilms[randomNumber]
+  //   });
+  // };
 
   render() {
     return (
