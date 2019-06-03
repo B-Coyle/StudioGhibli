@@ -5,9 +5,8 @@ import { Route } from "react-router-dom";
 import {FilmCard} from "../../components/Card/FilmCard/index";
 import {LocationCard} from "../../components/Card/LocationCard/index";
 import {PeopleCard} from "../../components/Card/PeopleCard/index";
-import { connect } from "react-redux";
 
-export default class MainContainer extends Component {
+export class MainContainer extends Component {
   constructor() {
     super();
   }
@@ -40,3 +39,5 @@ export default class MainContainer extends Component {
     );
   }
 }
+
+export default MainContainer;
