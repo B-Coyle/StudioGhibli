@@ -1,28 +1,11 @@
-import React, { Component } from "react";
-import {fetchLocations } from "../../../util/apiCalls";
+import React from "react";
+import './Card.css'
 
-export default class LocationCard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      locations: []
-    };
-  }
-
-  componentDidMount() {
-    fetchLocations()
-    .then(location =>
-      this.setState({
-        locations: location
-      })
-    );
-  }
-
-  render() {
-    return (
-      <section>
-      <p>Test2</p>
-      </section>
-    );
-  }
-}
+export const Card = ({ location }) => {
+  return (
+  <article className="card">
+    <p>Location Name: {location.name}</p>
+    <p>Climate: {location.climate}</p>
+    <p>Terrain: {location.terrain}</p>
+  </article>)
+};
