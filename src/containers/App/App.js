@@ -5,34 +5,20 @@ import { fetchMovie } from "../../util/apiCalls.js";
 import {MainContainer} from "../../containers/MainContainer/MainContainer";
 import Nav from '../../components/Nav/Nav';
 
-export default class App extends Component {
+export class App extends Component {
   constructor() {
     super();
-    this.state = {
-      // allFilms: [],
-      // randomFilm: {}
-    };
   }
 
-  // componentDidMount() {
-  //   fetchMovie().then(films =>
-  //     this.setState(
-  //       {
-  //         allFilms: films
-  //       },
-  //       () => this.assignRandomInformation()
-  //     )
-  //   );
-  // }
+  componentDidMount() {
+    this.props.fetchFilms()
+    this.props.fetchLocations()
+    this.props.fetchPeople()
+  }
 
-  // assignRandomInformation = () => {
-  //   let randomNumber = Math.floor(Math.random() * this.state.allFilms.length);
-  //   this.setState({
-  //     randomFilm: this.state.allFilms[randomNumber]
-  //   });
-  // };
 
   render() {
+    const { hasErrored, isLoading, films, locations, people } = this.props;
     return (
       <section className="App mainBody">
         <div className="header">
@@ -43,11 +29,13 @@ export default class App extends Component {
           <p className="quote">—Kiki’s Delivery Service (1989)</p>
         </div>
         <main className="main">
+        {hasErrored && <h2>Error loading information</h2>}
+        {isLoading && <h2>Please wait- information loading ...</h2>}
           <div className="Nav">
             <Nav />
           </div>
           <div className="MainContainer">
-            <MainContainer />
+            <MainContainer films={films} people={people} locations={locations}/>
           </div>
         </main>
       </section>
@@ -56,3 +44,22 @@ export default class App extends Component {
 }
 
 
+
+export const mapStateToProps = state => ({
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored,
+  films: state.films,
+  locations: state.locations,
+  people: state.people
+});
+
+export const mapDispatchToProps = dispatch => ({
+  fetchFilms: () => dispatch(fetchFilms()),
+  fetchLocations: () => dispatch(fetchLocations()),
+  fetchPeople: () => dispatch(fetchPeople())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
