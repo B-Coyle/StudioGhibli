@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./MainContainer.css";
 import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
-import FilmCard from "../../components/Card/FilmCard/index";
-import LocationCard from "../../components/Card/LocationCard/index";
-import PeopleCard from "../../components/Card/PeopleCard/index";
+import {FilmCard} from "../../components/Card/FilmCard/index";
+import {LocationCard} from "../../components/Card/LocationCard/index";
+import {PeopleCard} from "../../components/Card/PeopleCard/index";
 import { connect } from "react-redux";
 
 export default class MainContainer extends Component {
@@ -20,11 +20,11 @@ export default class MainContainer extends Component {
           <button className="button" onClick={this.handleChange} name="films">
             Films
           </button>
-          <FilmCard />
+          {/* <FilmCard /> */}
         </Route>
         <Route exact path="/characters">
           <button className="button" onClick={this.handleChange} name="characters">Characters</button>
-          <PeopleCard />
+          {/* <PeopleCard /> */}
         </Route>
         <Route exact path="/locations">
           <button
@@ -34,7 +34,7 @@ export default class MainContainer extends Component {
           >
             Locations
           </button>
-          <LocationCard  />
+          {/* <LocationCard  /> */}
         </Route>
       </section>
     );
