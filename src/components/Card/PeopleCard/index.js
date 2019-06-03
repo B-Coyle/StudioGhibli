@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { fetchPeople } from "../../../util/apiCalls";
-
-
-export default class PeopleCard extends Component {
+class PeopleCard extends Component {
   constructor() {
     super();
     this.state = {
-      characters: [],
+      people: [],
       loading: false
     };
   }
@@ -34,9 +32,9 @@ export default class PeopleCard extends Component {
   };
 
   render() {
-    const peopleCards = this.state.characters.map(person => (
-      <Card key={person.id} data={person} category="person" />
-    ));
+    // const peopleCards = this.state.characters.map(person => (
+    //   <PeopleCard key={person.id} data={person} category="person" />
+    // ));
 
     const loadingMessage = (
       <div className="loadingMessage">
@@ -45,8 +43,11 @@ export default class PeopleCard extends Component {
     );
     return (
       <section className="cardContainer">
-        {this.state.loading ? loadingMessage : peopleCards}
+        <p>{this.state.people[0]}</p>
+        {/* {this.state.loading ? loadingMessage : peopleCards} */}
       </section>
     );
   }
 }
+
+export default PeopleCard;
