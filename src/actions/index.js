@@ -22,3 +22,8 @@ export const getPeople = (people) => ({
     type: 'GET_PEOPLE',
     people
 })
+
+export const setCategory = (category) => ({
+    type: 'SET_CATEGORY',
+    category
+})
