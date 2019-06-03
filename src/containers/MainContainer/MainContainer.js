@@ -6,7 +6,7 @@ import FilmCard from '../../components/Card/FilmCard/index';
 import LocationCard from '../../components/Card/LocationCard/index';
 import PeopleCard from '../../components/Card/PeopleCard/index';
 
-class MainContainer extends Component {
+export class MainContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,25 +15,7 @@ class MainContainer extends Component {
     }
   }
 
-  setContainer = () => {
-    switch (this.state.category) {
-      case "films":
-        return <FilmCard />;
-      case "locations":
-        return <LocationCard />;
-      case "characters":
-        return <PeopleCard />;
-      default:
-        return <h2>Error Loading Information</h2>
 
-    }
-  }
-
-
-
-  handleChange =() => {
-
-  }
 
   render() {
     return (
@@ -51,5 +33,15 @@ class MainContainer extends Component {
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored,
+  films: state.films,
+  locations: state.locations,
+  people: state.people
+
+})
+
 
 export default MainContainer;
