@@ -1,4 +1,4 @@
-import {isLoading, hasErrored, getPresidents} from './index';
+import {isLoading, hasErrored, getFilms} from './index';
 
 describe('actions', () => {
     describe('isLoading', () => {
@@ -26,7 +26,7 @@ describe('actions', () => {
         it('should return an action object with a type of GET_FILMS', () => {
             const expected = {
                 type: 'GET_FILMS',
-                presidents: [{film: "Howl's Moving Castle"}]
+                films: [{film: "Howl's Moving Castle"}]
             }
             const result = getFilms([{film: "Howl's Moving Castle"}])
             expect(result).toEqual(expected);
