@@ -1,7 +1,7 @@
 import { isLoading, hasErrored, getLocations } from '../actions'
 
 export const fetchLocations = () => {
-  const url = 'https://ghibliapi.herokuapp.com/films'
+  const url = 'https://ghibliapi.herokuapp.com/locations'
   return async (dispatch) => {
     try {
       dispatch(isLoading(true));
