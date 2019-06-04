@@ -4,13 +4,19 @@
   background-color: #739f3d;
 }
 
+.main-title{
+  font-weight: 900;
+  font-size: 36pt;
+}
+
+
 .main-title, 
 .quote {
   margin: 0;
   color:white;
   display: flex;
   justify-content: center;
-}
+}]
 
 .quote {
   padding: 10px;
