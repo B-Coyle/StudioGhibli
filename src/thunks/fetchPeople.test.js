@@ -1,15 +1,15 @@
-import { fetchFilms } from "./fetchFilms";
+import { fetchPeople } from "./fetchPeople";
 import * as actions from "../actions";
 
-describe("fetchFilms Thunk", () => {
+describe("fetchPeople Thunk", () => {
   let mockDispatch;
-  let mockFilm;
+  let mockPerson;
 
   beforeEach(() => {
     mockDispatch = jest.fn();
 
-    mockFilm = [{
-        title: "Howl's Moving Castle"
+    mockPerson = [{
+        name: "Kiki"
     }]
   });
 
@@ -17,11 +17,11 @@ describe("fetchFilms Thunk", () => {
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
         ok: true,
-        json: () => Promise.resolve(mockFilm)
+        json: () => Promise.resolve(mockPerson)
       })
     );
-    const expected = actions.getFilms(mockFilm)
-    const thunk = fetchFilms(mockFilm);
+    const expected = actions.getPeople(mockPerson)
+    const thunk = fetchPeople(mockPerson);
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(expected);
   });

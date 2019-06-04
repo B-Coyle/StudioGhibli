@@ -1,7 +1,7 @@
 import { fetchLocations } from "./fetchLocations";
 import * as actions from "../actions";
 
-describe("addNewNote Thunk", () => {
+describe("fetchLocations Thunk", () => {
   let mockDispatch;
   let mockLocation;
 
