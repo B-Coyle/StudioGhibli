@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./MainContainer.css";
 import PropTypes from "prop-types";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { FilmCard } from "../../components/Card/FilmCard/index";
 import { LocationCard } from "../../components/Card/LocationCard/index";
 import { PeopleCard } from "../../components/Card/PeopleCard/index";
@@ -66,35 +66,41 @@ export class MainContainer extends Component {
     return (
       <section className="mainContainer">
         <article className="mainBtns">
-          <Route exact path="/films">
-            <button
-              className="button"
-              onClick={this.selectCategory}
-              name="films"
-              value="films"
-            >
-              Films
-            </button>
+          <Route exact path="/films" component={FilmCard}>
+            <Link to="/films">
+              <button
+                className="button"
+                onClick={this.selectCategory}
+                name="films"
+                value="films"
+              >
+                Films
+              </button>
+            </Link>
           </Route>
-          <Route exact path="/characters">
-            <button
-              className="button"
-              onClick={this.selectCategory}
-              name="characters"
-              value="characters"
-            >
-              Characters
-            </button>
+          <Route exact path="/characters" component={PeopleCard}>
+            <Link to="/characters">
+              <button
+                className="button"
+                onClick={this.selectCategory}
+                name="characters"
+                value="characters"
+              >
+                Characters
+              </button>
+            </Link>
           </Route>
-          <Route exact path="/locations">
-            <button
-              className="button"
-              onClick={this.selectCategory}
-              name="locations"
-              value="locations"
-            >
-              Locations
-            </button>
+          <Route exact path="/locations" component={LocationCard}>
+            <Link>
+              <button
+                className="button"
+                onClick={this.selectCategory}
+                name="locations"
+                value="locations"
+              >
+                Locations
+              </button>
+            </Link>
           </Route>
           <main className="main">{showCards && cardContainer}</main>
         </article>
