@@ -9,3 +9,5 @@ export const LocationCard = ({ location }) => {
     <p>Terrain: {location.terrain}</p>
   </article>)
 };
+
+

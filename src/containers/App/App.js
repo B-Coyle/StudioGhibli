@@ -58,14 +58,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-
-{
-  /* <Router>
-            <div>
-              <Route path="/" component={App} />
-              <Route path="/characters" component={PeopleCard} />
-              <Route path="/films" component={FilmCard} />
-              <Route path="/locations" component={LocationCard} />
-            </div>
-          </Router> */
-}
