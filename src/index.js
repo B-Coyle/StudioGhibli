@@ -8,8 +8,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import {rootReducer} from "./reducers";
 import { BrowserRouter, Route } from "react-router-dom";
-import { FilmCard } from "./components/Card/FilmCard";
-import { LocationCard } from "./components/Card/LocationCard";
+
 
 const store = createStore(rootReducer,composeWithDevTools(applyMiddleware(thunk)));
 
