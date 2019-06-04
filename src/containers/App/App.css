@@ -15,7 +15,8 @@
   background-size: cover;
   width: 100%;
   position: fixed;
-  height: 100vh
+  height: 100vh;
+  overflow: scroll;
 
 }
 
