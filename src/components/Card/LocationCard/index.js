@@ -1,12 +1,13 @@
 import React from "react";
 import "./Card.css";
 
-export const LocationCard = (location) => {
+export const LocationCard = (props) => {
+  const data = props.data;
   return (
     <article className="card">
-      <p>Location Name: {location.name}</p>
-      <p>Climate: {location.climate}</p>
-      <p>Terrain: {location.terrain}</p>
+      <p>Location Name: {data.name}</p>
+      <p>Climate: {data.climate}</p>
+      <p>Terrain: {data.terrain}</p>
     </article>
   );
 };
