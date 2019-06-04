@@ -10,7 +10,6 @@ import MainContainer from "../MainContainer/MainContainer";
 import { Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
-
 export class App extends Component {
   constructor() {
     super();
@@ -27,8 +26,8 @@ export class App extends Component {
     return (
       <section className="App mainBody">
         <div className="header">
+          <Nav />
           <h1 className="main-title">Studio Ghibli</h1>
-          <Nav /> 
           <p className="quote">
             “We each need to find our own inspiration. Sometimes it’s not easy.”
           </p>
@@ -37,7 +36,7 @@ export class App extends Component {
         <main className="main">
           {hasErrored && <h2>Error loading information</h2>}
           {isLoading && <h2>Please wait- information loading ...</h2>}
-          <MainContainer  />
+          <MainContainer />
         </main>
       </section>
     );
@@ -46,7 +45,7 @@ export class App extends Component {
 
 export const mapStateToProps = state => ({
   isLoading: state.isLoading,
-  hasErrored: state.hasErrored,
+  hasErrored: state.hasErrored
 });
 
 export const mapDispatchToProps = dispatch => ({
@@ -60,11 +59,13 @@ export default connect(
   mapDispatchToProps
 )(App);
 
-      {/* <Router>
+{
+  /* <Router>
             <div>
               <Route path="/" component={App} />
               <Route path="/characters" component={PeopleCard} />
               <Route path="/films" component={FilmCard} />
               <Route path="/locations" component={LocationCard} />
             </div>
-          </Router> */}
+          </Router> */
+}
