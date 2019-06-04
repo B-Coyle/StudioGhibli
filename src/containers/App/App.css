@@ -21,17 +21,3 @@ hr {
   color: white;
 }
 
-.Nav {
-  margin-top: 60px;
-}
-
-.Button {
-  display: flex;
-  justify-content: center;
-}
-
-.MainContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}

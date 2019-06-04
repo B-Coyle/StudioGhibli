@@ -28,6 +28,7 @@ export class App extends Component {
       <section className="App mainBody">
         <div className="header">
           <h1 className="main-title">Studio Ghibli</h1>
+          <Nav /> 
           <p className="quote">
             “We each need to find our own inspiration. Sometimes it’s not easy.”
           </p>
@@ -36,7 +37,6 @@ export class App extends Component {
         <main className="main">
           {hasErrored && <h2>Error loading information</h2>}
           {isLoading && <h2>Please wait- information loading ...</h2>}
-          <Nav /> 
           <MainContainer  />
         </main>
       </section>

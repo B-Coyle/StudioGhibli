@@ -2,12 +2,14 @@
   padding: 20px;
   font-size: 12pt;
   width: 200px;
-  margin: 0 40px;
+  margin: 10px 40px;
   background-color: #f69454;
   color: white;
+  display: inline-block;
 }
 
 .mainContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
