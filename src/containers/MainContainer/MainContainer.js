@@ -91,7 +91,7 @@ export class MainContainer extends Component {
             </Link>
           </Route>
           <Route exact path="/locations" component={LocationCard}>
-            <Link>
+            <Link to='/locations'>
               <button
                 className="button"
                 onClick={this.selectCategory}

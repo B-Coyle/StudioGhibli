@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Nav.css';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 export default class Nav extends Component {
   constructor() {
@@ -18,29 +18,29 @@ export default class Nav extends Component {
               <span />
               <span />
               <ul id="menu">
-                <Link to="/">
+                <NavLink to="/">
                   <li>Home</li>
-                </Link>
+                </NavLink>
                 <hr />
-                <Link to="/films">
+                <NavLink to="/films">
                   <li>Films</li>
-                </Link>
+                </NavLink>
                 <hr />
-                <Link to="/characters">
+                <NavLink to="/characters">
                   <li>Characters</li>
-                </Link>
+                </NavLink>
                 <hr />
-                <Link to="/locations">
+                <NavLink to="/locations">
                   <li>Locations</li>
-                </Link>
+                </NavLink>
                 <hr />
-                <Link to="/about">
+                <NavLink to="/about">
                   <li>About</li>
-                </Link>
+                </NavLink>
                 <hr />
-                <Link to="/recipes">
+                <NavLink to="/recipes">
                   <li>Recipes</li>
-                </Link>
+                </NavLink>
                 <hr />
               </ul>
             </div>
