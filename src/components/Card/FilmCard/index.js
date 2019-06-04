@@ -11,3 +11,4 @@ export const FilmCard = ({ films }) => {
     <p>Release Date: {films.release_date}</p>
   </article>)
 };
+

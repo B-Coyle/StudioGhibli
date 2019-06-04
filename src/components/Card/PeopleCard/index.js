@@ -11,3 +11,4 @@ export const PeopleCard = ({ people }) => {
     <p>Hair Color: {people.hair_color}</p>
   </article>)
 };
+
