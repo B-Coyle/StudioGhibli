@@ -59,23 +59,24 @@ export class MainContainer extends Component {
   };
 
   render() {
-    let { showCards } = this.state;
+    let {showCards} = this.state;
     let cardContainer = this.setCard();
     return (
       <section className="mainContainer">
         <article className="mainBtns">
-          <Route exact path="/films" render={() => this.setCard()}/>
+          <Route exact path="/films" render={() => this.setCard()} >
           <Link to="/films">
               <button
                 className="button"
                 onClick={this.selectCategory}
                 name="films"
-                value="films"
-              >
+                value="films">
                 Films
               </button>
             </Link>
-          <Route exact path="/characters" component={PeopleCard}>
+            </Route>
+          <Route exact path="/characters" 
+          render={() => this.setCard()}>
             <Link to="/characters">
               <button
                 className="button"
@@ -87,7 +88,9 @@ export class MainContainer extends Component {
               </button>
             </Link>
           </Route>
-          <Route exact path="/locations" component={LocationCard}>
+          <Route exact path="/locations" 
+          render={() => this.setCard()}
+          >
             <Link to='/locations'>
               <button
                 className="button"
@@ -99,7 +102,8 @@ export class MainContainer extends Component {
               </button>
             </Link>
           </Route>
-          <main className="main">{showCards && cardContainer}</main>
+          <main className="main">
+          {showCards && cardContainer}</main>
         </article>
       </section>
     );

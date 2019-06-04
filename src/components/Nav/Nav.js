@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Nav.css';
-import {NavLink} from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 import { FilmCard } from "../Card/FilmCard";
 import { PeopleCard } from "../Card/PeopleCard";
 import { LocationCard } from "../Card/LocationCard";
@@ -11,7 +11,8 @@ export class Nav extends Component {
   constructor() {
     super();
     this.state ={
-      showCards: false
+      showCards: false,
+      category: null
     }
   }
 
@@ -32,6 +33,30 @@ export class Nav extends Component {
     this.props.setCategory(category);
   };
 
+  setCard = () => {
+    let container;
+    switch (this.props.category) {
+      case "Films":
+        container = this.props.films.map(films => (
+          <FilmCard films={films} key={films.id} />
+        ));
+        break;
+      case "Characters":
+        container = this.props.people.map(people => (
+          <PeopleCard people={people} key={people.id} />
+        ));
+        break;
+      case "Locations":
+        container = this.props.locations.map(location => (
+          <LocationCard location={location} key={location.id} />
+        ));
+        break;
+      default:
+        container = <h2>Error Loading Information</h2>;
+    }
+    return container;
+  };
+
 
   render() {
     return (
@@ -45,27 +70,27 @@ export class Nav extends Component {
               <span />
               <ul id="menu">
                 <NavLink to="/">
-                  <li onClick={this.selectCategory}>Home</li>
+                  <li onClick={this.selectCategory} render={()=> this.setCard()}>Home</li>
                 </NavLink>
                 <hr />
                 <NavLink to="/films">
-                  <li onClick={this.selectCategory}>Films</li>
+                  <li onClick={this.selectCategory} render={() => this.setCard()}>Films</li>
                 </NavLink>
                 <hr />
                 <NavLink to="/characters">
-                  <li onClick={this.selectCategory}>Characters</li>
+                  <li onClick={this.selectCategory} render={() => this.setCard()}>Characters</li>
                 </NavLink>
                 <hr />
                 <NavLink to="/locations">
-                  <li onClick={this.selectCategory}>Locations</li>
+                  <li onClick={this.selectCategory} render= {() => this.setCard()}>Locations</li>
                 </NavLink>
                 <hr />
                 <NavLink to="/about">
-                  <li onClick={this.selectCategory}>About</li>
+                  <li>About</li>
                 </NavLink>
                 <hr />
                 <NavLink to="/recipes">
-                  <li onClick={this.selectCategory}>Recipes</li>
+                  <li>Recipes</li>
                 </NavLink>
                 <hr />
               </ul>
@@ -77,8 +102,15 @@ export class Nav extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  films: state.films,
+  locations: state.locations,
+  people: state.people,
+  category: state.category
+});
+
 export const mapDispatchToProps = dispatch => ({
   setCategory: category => dispatch(setCategory(category))
 });
 
-export default connect(null, mapDispatchToProps)(Nav)
+export default connect(mapStateToProps, mapDispatchToProps)(Nav)
