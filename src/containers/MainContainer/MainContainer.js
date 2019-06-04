@@ -31,14 +31,12 @@ export class MainContainer extends Component {
 
     this.showCards();
 
-    this.setState({
-      category
-    });
+    this.props.setCategory(category);
   };
 
   setCard = () => {
     let container;
-    switch (this.state.category) {
+    switch (this.props.category) {
       case "Films":
         container = this.props.films.map(films => (
           <FilmCard films={films} key={films.id} />
@@ -66,8 +64,8 @@ export class MainContainer extends Component {
     return (
       <section className="mainContainer">
         <article className="mainBtns">
-          <Route exact path="/films" component={FilmCard}>
-            <Link to="/films">
+          <Route exact path="/films" render={() => this.setCard()}/>
+          <Link to="/films">
               <button
                 className="button"
                 onClick={this.selectCategory}
@@ -77,7 +75,6 @@ export class MainContainer extends Component {
                 Films
               </button>
             </Link>
-          </Route>
           <Route exact path="/characters" component={PeopleCard}>
             <Link to="/characters">
               <button
