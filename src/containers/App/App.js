@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 // import PropTypes from "prop-types";
-import { fetchMovie } from "../../util/apiCalls.js";
 import { fetchFilms } from "../../thunks/fetchFilms";
 import { fetchLocations } from "../../thunks/fetchLocations";
 import { fetchPeople } from "../../thunks/fetchPeople";
