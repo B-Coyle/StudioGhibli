@@ -22,7 +22,7 @@ export class App extends Component {
   }
 
   render() {
-    const { hasErrored, isLoading, films, locations, people } = this.props;
+    const { hasErrored, isLoading} = this.props;
     return (
       <section className="App mainBody">
         <div className="header">
