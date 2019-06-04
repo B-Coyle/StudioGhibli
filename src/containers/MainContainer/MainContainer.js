@@ -2,6 +2,7 @@ import React from 'react';
 import { FilmCard } from '../../components/Card/FilmCard/index';
 import {PeopleCard} from '../../components/Card/PeopleCard/index';
 import {LocationCard} from '../../components/Card/LocationCard/index';
+import './MainContainer.css'
 
 export const MainContainer = ({data, type}) => {
     console.log(data)

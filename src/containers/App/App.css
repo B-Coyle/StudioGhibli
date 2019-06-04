@@ -19,7 +19,6 @@
 
 }
 
-
 .main-title, 
 .quote {
   margin: 0;
@@ -37,3 +36,18 @@ hr {
   color: white;
 }
 
+
+.button {
+  padding: 20px;
+  font-size: 12pt;
+  width: 200px;
+  margin: 10px 40px;
+  background-color: #f69454;
+  color: white;
+  justify-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
