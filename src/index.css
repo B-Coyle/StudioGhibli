@@ -10,9 +10,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('../src/images/background2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  min-height: 100vh;
 }
