@@ -33,52 +33,48 @@ export class App extends Component {
           </p>
           <p className="quote">—Kiki’s Delivery Service (1989)</p>
         </div>
-        <main className="main">
+        <article className="main">
           <Link to="/films">
-            <button
-              className="button"
-              name="films"
-              value="films"
-            >
+            <button className="button" name="films" value="films">
               Films
             </button>
           </Link>
           <Link to="/characters">
-            <button
-              className="button"
-              name="characters"
-              value="characters"
-            >
+            <button className="button" name="characters" value="characters">
               Characters
             </button>
           </Link>
           <Link to="/locations">
-            <button
-              className="button"
-              name="locations"
-              value="locations"
-            >
+            <button className="button" name="locations" value="locations">
               Locations
             </button>
           </Link>
+          </article>
+          <main>
           {hasErrored && <h2>Error loading information</h2>}
           {isLoading && <h2>Please wait- information loading ...</h2>}
           <Route
             exact
             path="/films"
-            render={(props) => <MainContainer data={this.props.films}  type='films'/>}
+            render={props => (
+              <MainContainer data={this.props.films} type="films" />
+            )}
           />
           <Route
             exact
             path="/characters"
-            render={(props) => <MainContainer data={this.props.people} type='people' />}
+            render={props => (
+              <MainContainer data={this.props.people} type="people" />
+            )}
           />
           <Route
             exact
             path="/locations"
-            render={(props) => <MainContainer data={this.props.locations} type='locations' />}
+            render={props => (
+              <MainContainer data={this.props.locations} type="locations" />
+            )}
           />
-        </main> 
+        </main>
       </section>
     );
   }
