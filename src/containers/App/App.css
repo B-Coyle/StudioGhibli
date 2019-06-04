@@ -4,13 +4,19 @@
   background-color: #739f3d;
 }
 
+.main-title{
+  font-weight: 900;
+  font-size: 36pt;
+}
+
+
 .main-title, 
 .quote {
   margin: 0;
   color:white;
   display: flex;
   justify-content: center;
-}
+}]
 
 .quote {
   padding: 10px;
@@ -21,17 +27,3 @@ hr {
   color: white;
 }
 
-.Nav {
-  margin-top: 60px;
-}
-
-.Button {
-  display: flex;
-  justify-content: center;
-}
-
-.MainContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}

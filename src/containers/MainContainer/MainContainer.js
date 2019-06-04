@@ -1,4 +1,4 @@
-  import React, { Component } from "react";
+import React, { Component } from "react";
 import "./MainContainer.css";
 import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
@@ -40,7 +40,9 @@ export class MainContainer extends Component {
     let container;
     switch (this.state.category) {
       case "Films":
-        container = this.props.films.map(films => <FilmCard film={films} key={films.id} />);
+        container = this.props.films.map(films => (
+          <FilmCard films={films} key={films.id} />
+        ));
         break;
       case "Characters":
         container = this.props.people.map(people => (
@@ -58,47 +60,44 @@ export class MainContainer extends Component {
     return container;
   };
 
-  //do conditional rendering to make sure item is fetched before rendering
-
   render() {
     let { showCards } = this.state;
     let cardContainer = this.setCard();
     return (
-      <section className="mainBtns">
-        <main className="main">{showCards && cardContainer}</main>
-        <Route exact path="/films">
-          <button
-            className="button"
-            onClick={this.selectCategory}
-            name="films"
-            value="films"
-          >
-            Films
-          </button>
-          {/* <FilmCard films={this.props.films} /> */}
-        </Route>
-        <Route exact path="/characters">
-          <button
-            className="button"
-            onClick={this.selectCategory}
-            name="characters"
-            value="characters"
-          >
-            Characters
-          </button>
-          {/* <PeopleCard people={this.props.people} /> */}
-        </Route>
-        <Route exact path="/locations">
-          <button
-            className="button"
-            onClick={this.selectCategory}
-            name="locations"
-            value="locations"
-          >
-            Locations
-          </button>
-          {/* <LocationCard location={this.props.location} /> */}
-        </Route>
+      <section className="mainContainer">
+        <article className="mainBtns">
+          <Route exact path="/films">
+            <button
+              className="button"
+              onClick={this.selectCategory}
+              name="films"
+              value="films"
+            >
+              Films
+            </button>
+          </Route>
+          <Route exact path="/characters">
+            <button
+              className="button"
+              onClick={this.selectCategory}
+              name="characters"
+              value="characters"
+            >
+              Characters
+            </button>
+          </Route>
+          <Route exact path="/locations">
+            <button
+              className="button"
+              onClick={this.selectCategory}
+              name="locations"
+              value="locations"
+            >
+              Locations
+            </button>
+          </Route>
+          <main className="main">{showCards && cardContainer}</main>
+        </article>
       </section>
     );
   }
