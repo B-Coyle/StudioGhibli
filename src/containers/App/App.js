@@ -7,7 +7,7 @@ import { fetchLocations } from "../../thunks/fetchLocations";
 import { fetchPeople } from "../../thunks/fetchPeople";
 import Nav from "../../components/Nav/Nav";
 import MainContainer from "../MainContainer/MainContainer";
-import { Router, Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 export class App extends Component {
@@ -23,6 +23,7 @@ export class App extends Component {
 
   render() {
     const { hasErrored, isLoading } = this.props;
+
     return (
       <section className="App mainBody">
         <div className="header">
@@ -34,19 +35,62 @@ export class App extends Component {
           <p className="quote">—Kiki’s Delivery Service (1989)</p>
         </div>
         <main className="main">
+          <Link to="/films">
+            <button
+              className="button"
+              name="films"
+              value="films"
+            >
+              Films
+            </button>
+          </Link>
+          <Link to="/characters">
+            <button
+              className="button"
+              name="characters"
+              value="characters"
+            >
+              Characters
+            </button>
+          </Link>
+          <Link to="/locations">
+            <button
+              className="button"
+              name="locations"
+              value="locations"
+            >
+              Locations
+            </button>
+          </Link>
           {hasErrored && <h2>Error loading information</h2>}
           {isLoading && <h2>Please wait- information loading ...</h2>}
-          <MainContainer />
-        </main>
-        {/* <iframe width="420" height="315" src="https://www.youtube.com/watch?v=3jWRrafhO7M&t=2575s?autoplay=1"></iframe> */}
-        </section>
+          <Route
+            exact
+            path="/films"
+            render={(props) => <MainContainer data={this.props.films}  type='films'/>}
+          />
+          <Route
+            exact
+            path="/characters"
+            render={(props) => <MainContainer data={this.props.people} type='people' />}
+          />
+          <Route
+            exact
+            path="/locations"
+            render={(props) => <MainContainer data={this.props.locations} type='locations' />}
+          />
+        </main> 
+      </section>
     );
   }
 }
 
 export const mapStateToProps = state => ({
   isLoading: state.isLoading,
-  hasErrored: state.hasErrored
+  hasErrored: state.hasErrored,
+  films: state.films,
+  locations: state.locations,
+  people: state.people
 });
 
 export const mapDispatchToProps = dispatch => ({

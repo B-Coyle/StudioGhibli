@@ -1,14 +1,16 @@
 import React from "react";
-import './Card.css';
+import "./Card.css";
 
-export const PeopleCard = ({ people }) => {
+export const PeopleCard = props => {
+  const data = props.data;
+  console.log(props)
   return (
-  <article className="card">
-    <p>Character Name: {people.name}</p>
-    <p>Gender: {people.gender}</p>
-    <p>Age: {people.age}</p>
-    <p>Eye Color: {people.eye_color}</p>
-    <p>Hair Color: {people.hair_color}</p>
-  </article>)
+    <article className="card">
+      <p>Character Name: {data.name}</p>
+      <p>Gender: {data.gender}</p>
+      <p>Age: {data.age}</p>
+      <p>Eye Color: {data.eye_color}</p>
+      <p>Hair Color: {data.hair_color}</p>
+    </article>
+  );
 };
-
