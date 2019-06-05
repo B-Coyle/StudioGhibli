@@ -2,8 +2,6 @@ import {getPeopleReducer} from '../reducers/peopleReducer';
 import {getPeople} from '../actions/index';
 
 describe('getPeopleReducer', () => {
-
-    const mockLocation = [{name: "San"}]
     it('should return a default state', () => {
         const expected = []
         const result = getPeopleReducer(undefined ,{})
