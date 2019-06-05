@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 export const PeopleCard = props => {
@@ -54,3 +55,7 @@ export const PeopleCard = props => {
     </article>
   );
 };
+
+PeopleCard.propTypes = {
+  data: PropTypes.object
+}

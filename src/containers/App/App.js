@@ -91,16 +91,17 @@ export const mapDispatchToProps = dispatch => ({
   fetchPeople: () => dispatch(fetchPeople())
 });
 
+App.propTypes = {
+  fetchFilms: PropTypes.func,
+  fetchLocations: PropTypes.func,
+  fetchPeople: PropTypes.func,
+  films: PropTypes.array,
+  locations: PropTypes.array,
+  people: PropTypes.array
+}
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
 
-App.propTypes = {
-  fetchFilms: PropTypes.func(),
-  fetchLocations: PropTypes.func(),
-  fetchPeople: PropTypes.func(),
-  films: PropTypes.array,
-  locations: PropTypes.array,
-  people: PropTypes.array
-}

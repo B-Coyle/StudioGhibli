@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 export const FilmCard = props => {
@@ -83,6 +84,10 @@ export const FilmCard = props => {
     </article>
   );
 };
+
+FilmCard.propTypes = {
+  data: PropTypes.object
+}
 
 
 

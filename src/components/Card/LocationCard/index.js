@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 export const LocationCard = (props) => {
@@ -11,3 +12,7 @@ export const LocationCard = (props) => {
     </article>
   );
 };
+
+LocationCard.propTypes = {
+  data: PropTypes.object
+}
