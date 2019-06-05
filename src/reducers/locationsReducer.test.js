@@ -2,8 +2,6 @@ import {getLocationsReducer} from '../reducers/locationsReducer';
 import {getLocations} from '../actions/index';
 
 describe('getLocationsReducer', () => {
-
-    const mockLocation = [{name: "Irontown"}]
     it('should return a default state', () => {
         const expected = []
         const result = getLocationsReducer(undefined ,{})
