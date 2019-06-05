@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
-export const LocationCard = (props) => {
+export const LocationCard = props => {
   const data = props.data;
   return (
     <article className="card">
@@ -10,4 +11,8 @@ export const LocationCard = (props) => {
       <p>Terrain: {data.terrain}</p>
     </article>
   );
+};
+
+LocationCard.propTypes = {
+  data: PropTypes.object
 };

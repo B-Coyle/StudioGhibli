@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FilmCard } from "../../components/Card/FilmCard/index";
 import { PeopleCard } from "../../components/Card/PeopleCard/index";
 import { LocationCard } from "../../components/Card/LocationCard/index";
@@ -20,3 +21,7 @@ export const MainContainer = ({ data, type }) => {
 };
 
 export default MainContainer;
+
+MainContainer.propTypes = {
+  data: PropTypes.array
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 export const PeopleCard = props => {
@@ -45,7 +46,11 @@ export const PeopleCard = props => {
   }, {});
   return (
     <article className="card">
-      <img className="film-image" src={`/images/${image.id}.jpg`} alt="Images are for each Studio Ghibli character"/>
+      <img
+        className="film-image"
+        src={`/images/${image.id}.jpg`}
+        alt="Images are for each Studio Ghibli character"
+      />
       <p>Character Name: {data.name}</p>
       <p>Gender: {data.gender}</p>
       <p>Age: {data.age}</p>
@@ -53,4 +58,8 @@ export const PeopleCard = props => {
       <p>Hair Color: {data.hair_color}</p>
     </article>
   );
+};
+
+PeopleCard.propTypes = {
+  data: PropTypes.object
 };

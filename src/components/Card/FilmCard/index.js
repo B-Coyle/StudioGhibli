@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 export const FilmCard = props => {
@@ -74,7 +75,11 @@ export const FilmCard = props => {
 
   return (
     <article className="card">
-      <img className="film-image" src={`/images/${image.id}.jpg`} alt="Displays movie splash posters for each studio ghibli movie" />
+      <img
+        className="film-image"
+        src={`/images/${image.id}.jpg`}
+        alt="Displays movie splash posters for each studio ghibli movie"
+      />
       <p>Movie Name: {data.title}</p>
       <p>Description: {data.description}</p>
       <p>Director: {data.director}</p>
@@ -84,7 +89,6 @@ export const FilmCard = props => {
   );
 };
 
-
-
-
-
+FilmCard.propTypes = {
+  data: PropTypes.object
+};
