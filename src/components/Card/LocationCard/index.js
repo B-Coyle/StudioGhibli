@@ -30,6 +30,12 @@ export const LocationCard = props => {
     { id: "469b14bd-5565-4436-bbed-c2036f42cc99" },
     { id: "b6bac992-a858-4d57-8477-9652d73caaa1" }
   ];
+  const image = images.reduce((accum, picture) => {
+    if (picture.id === data.id) {
+      accum.id = picture.id;
+    }
+    return accum;
+  }, {});
   return (
     <article className="card">
       <img
