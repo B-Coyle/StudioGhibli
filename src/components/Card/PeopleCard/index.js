@@ -45,7 +45,7 @@ export const PeopleCard = props => {
   }, {});
   return (
     <article className="card">
-      <img className="film-image" src={`/images/${image.id}.jpg`} />
+      <img className="film-image" src={`/images/${image.id}.jpg`} alt="Images are for each Studio Ghibli character"/>
       <p>Character Name: {data.name}</p>
       <p>Gender: {data.gender}</p>
       <p>Age: {data.age}</p>

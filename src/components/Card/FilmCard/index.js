@@ -74,7 +74,7 @@ export const FilmCard = props => {
 
   return (
     <article className="card">
-      <img className="film-image" src={`/images/${image.id}.jpg`} />
+      <img className="film-image" src={`/images/${image.id}.jpg`} alt="Displays movie splash posters for each studio ghibli movie" />
       <p>Movie Name: {data.title}</p>
       <p>Description: {data.description}</p>
       <p>Director: {data.director}</p>

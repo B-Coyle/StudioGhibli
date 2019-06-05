@@ -7,7 +7,7 @@ export const Nav = props => {
     return (
       <section className="Header">
         <header>
-          <nav role="navigation">
+          <nav>
             <div id="menuToggle">
               <input type="checkbox" />
               <span />
