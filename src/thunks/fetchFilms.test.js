@@ -29,6 +29,7 @@ describe("fetchFilms Thunk", () => {
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(expected);
   });
+  
   it("should dispatch hasErrored with a message if the response is not ok", async () => {
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
