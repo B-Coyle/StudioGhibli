@@ -4,13 +4,16 @@ import * as actions from "../actions";
 describe("fetchLocations Thunk", () => {
   let mockDispatch;
   let mockLocation;
+  let mockUrl;
 
   beforeEach(() => {
     mockDispatch = jest.fn();
-
-    mockLocation = [{
+    mockUrl = "http://localhost:3000/locations";
+    mockLocation = [
+      {
         name: "Irontown"
-    }]
+      }
+    ];
   });
 
   it("should check if dispatch is called", async () => {
@@ -20,11 +23,25 @@ describe("fetchLocations Thunk", () => {
         json: () => Promise.resolve(mockLocation)
       })
     );
-    const expected = actions.getLocations(mockLocation)
+    const expected = actions.getLocations(mockLocation);
     const thunk = fetchLocations(mockLocation);
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(expected);
   });
-});
+  it("should dispatch hasErrored with a message if the response is not ok", async () => {
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        ok: false,
+        statusText: "Something went wrong"
+      })
+    );
 
-//still need to do catch testing
+    const thunk = fetchLocations(mockUrl);
+
+    await thunk(mockDispatch);
+
+    expect(mockDispatch).toHaveBeenCalledWith(
+      actions.hasErrored("Something went wrong")
+    );
+  });
+});
