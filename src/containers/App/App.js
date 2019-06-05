@@ -5,7 +5,7 @@ import { fetchFilms } from "../../thunks/fetchFilms";
 import { fetchLocations } from "../../thunks/fetchLocations";
 import { fetchPeople } from "../../thunks/fetchPeople";
 import Nav from "../../components/Nav/Nav";
-import MainContainer from "../MainContainer/MainContainer";
+import MainContainer from "../../components/MainContainer/MainContainer";
 import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 

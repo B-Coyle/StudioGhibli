@@ -1,4 +1,4 @@
-import {isLoading, hasErrored, getFilms} from './index';
+import {isLoading, hasErrored, getFilms, getLocations, getPeople} from './index';
 
 describe('actions', () => {
     describe('isLoading', () => {
@@ -33,25 +33,25 @@ describe('actions', () => {
         })
     });
 
-    // describe('getLocations', () => {
-    //     it('should return an action object with a type of GET_FILMS', () => {
-    //         const expected = {
-    //             type: 'GET_LOCATIONSS',
-    //             presidents: [{film: "Howl's Moving Castle"}]
-    //         }
-    //         const result = getFilms([{film: "Howl's Moving Castle"}])
-    //         expect(result).toEqual(expected);
-    //     })
-    // });
+    describe('getLocations', () => {
+        it('should return an action object with a type of GET_LOCATIONS', () => {
+            const expected = {
+                type: 'GET_LOCATIONS',
+                locations: [{location: "Irontown"}]
+            }
+            const result = getLocations([{location: "Irontown"}])
+            expect(result).toEqual(expected);
+        })
+    });
 
-    // describe('getPeople', () => {
-    //     it('should return an action object with a type of GET_FILMS', () => {
-    //         const expected = {
-    //             type: 'GET_PEOPLE',
-    //             presidents: [{film: "Howl's Moving Castle"}]
-    //         }
-    //         const result = getFilms([{film: "Howl's Moving Castle"}])
-    //         expect(result).toEqual(expected);
-    //     })
-    // });
+    describe('getPeople', () => {
+        it('should return an action object with a type of GET_PEOPLE', () => {
+            const expected = {
+                type: 'GET_PEOPLE',
+                people: [{people: "Kiki"}]
+            }
+            const result = getPeople([{people: "Kiki"}])
+            expect(result).toEqual(expected);
+        })
+    });
 })
