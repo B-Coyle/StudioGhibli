@@ -26,7 +26,14 @@ First in the back-end folder run `npm start` in your terminal, you should see "S
   - <a href="https://www.figma.com/file/dmUSn8TF3hkeihdVsHZO6Ggd/Mod3SoloProject?node-id=0%3A1">Figma Wireframe</a>
 
   - Final Project Screenshots
+  [![localhost-3000-films.png](https://i.postimg.cc/1zMpcmXt/localhost-3000-films.png)](https://postimg.cc/d7kkJK8P)
+  
+  
+[![localhost-3000-characters.png](https://i.postimg.cc/c4gjCjH2/localhost-3000-characters.png)](https://postimg.cc/crWT5FfB)
 
+
+
+[![localhost-3000-characters-1.png](https://i.postimg.cc/0y7Bdw7C/localhost-3000-characters-1.png)](https://postimg.cc/QFxmjV4B)
 
 
 ## Emphasis of the Project
