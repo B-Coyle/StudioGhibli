@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { fetchFilms } from "../../thunks/fetchFilms";
 import { fetchLocations } from "../../thunks/fetchLocations";
 import { fetchPeople } from "../../thunks/fetchPeople";
@@ -95,3 +95,12 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+App.propTypes = {
+  fetchFilms: PropTypes.func(),
+  fetchLocations: PropTypes.func(),
+  fetchPeople: PropTypes.func(),
+  films: PropTypes.array,
+  locations: PropTypes.array,
+  people: PropTypes.array
+}
