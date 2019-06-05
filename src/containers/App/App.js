@@ -10,9 +10,6 @@ import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 export class App extends Component {
-  constructor() {
-    super();
-  }
 
   componentDidMount() {
     this.props.fetchFilms();
